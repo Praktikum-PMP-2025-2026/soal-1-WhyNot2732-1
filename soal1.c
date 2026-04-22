@@ -18,7 +18,7 @@
     int main()
     {
         int N;
-        int sum = 0, max = -100, idx;
+        int sum = 0, max, idx;
         float avg;
         char input[100];
         fgets(input, 100, stdin);
@@ -57,7 +57,9 @@
     }
 
     void maxout(int *arr[], int N, int *max, int *idx){
-        for (int i = 0; i < N; i++)
+        *max = *arr[0];
+        *idx = 0;
+        for (int i = 1; i < N; i++)
         {
             if (*max < *arr[i])
             {
