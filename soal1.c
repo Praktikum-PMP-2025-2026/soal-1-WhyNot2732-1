@@ -42,6 +42,12 @@
         printf("AVG %.2f\n", avg);
         printf("MAX %d\n", max);
         printf("IDX %d\n", idx);
+
+        for (int i = 0; i < N; i++)
+        {
+            free(arr[i]);
+        }
+        
         return 0;
     }
 
